@@ -1,10 +1,10 @@
-/* :root {
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgb(226 232 240);
   background-color: #242424;
 
   font-synthesis: none;
@@ -12,58 +12,364 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --font-sans: Inter Variable, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+
+  /* Background Colors */
+  --primary-bg:   15 23 42;
+  /* --secondary-bg: 19 18 33; */
+  --accent-bg:    94 234 212;
+
+  /* Text Colors */
+  --primary-text:   226 232 240;
+  --secondary-text: 148 163 184;
+  --tertiary-text:  100 116 139;
+  --accent-text:    94  234 212;
+
+  /* Color Modifiers */
+  --opaque: 1;
+
+  --base-gap: .25rem;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Reset */
+* {
+  box-sizing: border-box;
 }
 
-body {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 3rem;
+}
+h2 {
+  font-size: 1.25rem;
+}
+h3 {
+  font-size: 1rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+p {
+  color: rgb(var(--secondary-text) / var(--opaque));
+  font-size: 1rem;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(var(--accent-text) / var(--opaque));
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+html,
+body {
+  background-color: rgb(var(--primary-bg) / var(--opaque));
+  color: rgb(var(--primary-text) / var(--opaque));
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: var(--font-sans);
+}
+
+.text-primary {
+  color: rgb(var(--primary-text) / var(--opaque));
+}
+.text-secondary {
+  color: rgb(var(--secondary-text) / var(--opaque));
+}
+.text-tertiary {
+  color: rgb(var(--tertiary-text) / var(--opaque));
+}
+.text-accent {
+  color: rgb(var(--accent-text) / var(--opaque));
+}
+.text-opaque-2 {
+  --opaque: .5;
+}
+.bg-primary {
+  color: rgb(var(--primary-bg) / var(--opaque));
+}
+.bg-secondary {
+  color: rgb(var(--secondary-bg) / var(--opaque));
+}
+.bg-accent {
+  color: rgb(var(--accent-bg) / var(--opaque));
+}
+.w-screen {
+  width: 100vw;
+}
+.h-screen {
+  height: 100vh;
+}
+.h-min-screen {
+  min-height: 100vh;
+}
+.h-max-screen {
+  max-height: 100vh;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.none {
+  display: none;
+}
+.flex-col {
+  flex-direction: column;
+  &-r {
+    flex-direction: column-reverse;
+  }
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.items-center {
+  align-items: center;
+}
+.letter-tight {
+  letter-spacing: -.025em;
+}
+.letter-wide {
+  letter-spacing: .025em;
+}
+.line-relax {
+  line-height: 1.625;
+}
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+.rounded-full {
+  border-radius: 9999px;
+}
+
+
+/* Spacing Utilities */
+.gap-1 {
+  gap: calc(var(--base-gap) * 1);
+}
+
+.gap-2 {
+  gap: calc(var(--base-gap) * 2);
+}
+
+.gap-3 {
+  gap: calc(var(--base-gap) * 3);
+}
+
+.gap-5 {
+  gap: calc(var(--base-gap) * 5);
+}
+
+.gap-10 {
+  gap: calc(var(--base-gap) * 10);
+}
+
+.gap-14 {
+  gap: calc(var(--base-gap) * 14);
+}
+
+.gap-20 {
+  gap: calc(var(--base-gap) * 20);
+}
+.mt-2 {
+  margin-top: calc(var(--base-gap) * 2);
+}
+.mt-8 {
+  margin-top: calc(var(--base-gap) * 8);
+}
+.mb-4 {
+  margin-bottom: calc(var(--base-gap) * 4);
+}
+.mb-12 {
+  margin-bottom: calc(var(--base-gap) * 12);
+}
+.mb-36 {
+  margin-bottom: calc(var(--base-gap) * 36);
+}
+
+/* Font Size */
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+/* Font Weight */
+.font-medium {
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+.font-semibold {
+  font-weight: 600;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.font-bold {
+  font-weight: 700;
+}
+.font-extrabold {
+  font-weight: 800;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* Positioning */
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.mt-3 {
+  margin-top: .75rem;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.site {
+  gap: 1rem;
+  max-width: 1280px;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.listItem {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 1rem;
+}
+.listItem__header {
+  grid-column: span 2;
+  z-index: 10;
+}
+.listItem__body {
+  grid-column: span 6;
+  z-index: 10;
+}
+.linkOverlay {
+  position: absolute;
+  border-radius: .25rem;
+  top: -1rem;
+  bottom: -1rem;
+  left: -1.5rem;
+  right: -1.5rem;
+  z-index: 0;
+}
+.listItem .arrowUpIcon svg{
+  transform-origin: left bottom;
+}
+.listItem__img {
+  grid-column: span 2;
+  object-fit: cover;
+  z-index: 10;
+}
+.listItem:hover .linkOverlay {
+  background: rgba(30,41,59,.5);
+}
+.listItem:hover .arrowUpIcon svg {
+  transform: scale(1.1);
+}
+.listItem:hover h3 a {
+  color: rgb(var(--accent-text) / var(--opaque));
+}
+
+.tag {
+  line-height: 1.25rem;
+  font-size: .75rem;
+  font-weight: 500;
+  background-color: rgba(45, 212, 191, .1);
+
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  margin-top: .5rem;
+  margin-right: .375rem;
+}
+
+
+@media (min-width: 1024px) {
+  .site__header {
+    position: sticky;
+    top: 0;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    width: 50%;
+    max-height: 100vh;
   }
-  a:hover {
-    color: #747bff;
+  .site__main {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    width: 50%;
   }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+}
