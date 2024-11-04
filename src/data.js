@@ -83,7 +83,7 @@ export const projects = {
 	content: [
 		{
 			id: 1,
-			img: "src/assets/projects/agriPartFinder.webp",
+			img: "/assets/projects/agriPartFinder.webp",
             projectUrl: "https://www.agrisupply.com/parts.aspx?p=26912",
 			title: "Part Finder",
 			description: "A modern portfolio site to showcase my projects.",
@@ -92,7 +92,7 @@ export const projects = {
 		},
         {
 			id: 2,
-			img: "src/assets/projects/fdr1.png",
+			img: "/assets/projects/fdr1.png",
             projectUrl: "https://www.fdrfourfreedomspark.org/",
 			title: "FDR 4 Freedoms",
 			description: "A modern portfolio site to showcase my projects.",
