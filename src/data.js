@@ -19,7 +19,7 @@ export const experiences = {
 			company: "Kalio",
 			companyUrl: "https://www.kaliocommerce.com/",
 			description:
-				"Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and spearheading the development of internal tools.",
+				"Research, build, style, and ship high-quality websites, for a diverse array of projects for clients. Identify and coach clients on opportunites to improve e-commerce funnel conversion. Provide leadership within team through close collaboration, knowledge shares, and spearheading the development of new features.",
 			technologyTags: ["C#", "ASP.NET", "Javascript", "HTML & CSS"],
 			links: [
 				{
@@ -71,7 +71,7 @@ export const experiences = {
 			company: "PureRomance",
 			companyUrl: "https://www.pureromance.com/",
 			description:
-				"Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and spearheading the development of internal tools.",
+				"Built and maintained critical components used to construct Pure Romance's frontend. Worked closely with cross-functional teams, including marketing, designers, and product managers, to implement and advocate for best practices in web accessibility and patterns.",
 			technologyTags: ["Vue", "React", "TypeScript", "Javascript", "HTML & SCSS"],
 			links: [],
 		},
