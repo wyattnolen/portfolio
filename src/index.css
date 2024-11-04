@@ -139,9 +139,6 @@ body {
 }
 .flex-col {
   flex-direction: column;
-  &-r {
-    flex-direction: column-reverse;
-  }
 }
 .flex-row {
   flex-direction: row;
@@ -149,6 +146,15 @@ body {
 .flex-wrap {
   flex-wrap: wrap;
 }
+@media (min-width: 1024px) {
+  .flex-md-col {
+    flex-direction: column;
+  }
+  .flex-md-row {
+    flex-direction: row;
+  }
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -297,8 +303,7 @@ body {
 .site {
   gap: 1rem;
   max-width: 1280px;
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding: 3rem 1.5rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -359,6 +364,9 @@ body {
 
 
 @media (min-width: 1024px) {
+  .site {
+    padding: 0 6rem;
+  }
   .site__header {
     position: sticky;
     top: 0;

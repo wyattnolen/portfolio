@@ -5,7 +5,7 @@ import { header, experiences, projects } from "./data";
 
 function App() {
 	return (
-		<div className="App site flex justify-between h-min-screen">
+		<div className="App site flex flex-col flex-md-row justify-between h-min-screen">
 			<Header data={header} />
 			<main className="site__main">
 				<section className="mb-36">
