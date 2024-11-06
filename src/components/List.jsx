@@ -3,6 +3,7 @@ import Tags from "./Tags";
 import Links from "./Links";
 import Icon from "./Icon";
 
+
 function List({ data, type }) {
 	return (
 		<div>
