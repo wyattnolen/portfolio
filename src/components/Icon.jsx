@@ -1,8 +1,9 @@
-import CodePenIcon from '../assets/socials/codepen.svg';
-import GitHubIcon from '../assets/socials/github.svg';
-import LinkedInIcon from '../assets/socials/linkedin.svg';
-import LinkIcon from '../assets/link.svg';
-import ArrowUpIcon from '../assets/arrowUp.svg';
+import CodePenIcon from '../assets/svgs/socials/codepen.svg';
+import GitHubIcon from '../assets/svgs/socials/github.svg';
+import LinkedInIcon from '../assets/svgs/socials/linkedin.svg';
+import LinkIcon from '../assets/svgs/link.svg';
+import ArrowUpIcon from '../assets/svgs/arrowUp.svg';
+import FileIcon from '../assets/svgs/file.svg';
 
 const icons = {
     link: LinkIcon,
@@ -10,6 +11,7 @@ const icons = {
     codepen: CodePenIcon,
     github: GitHubIcon,
     linkedin: LinkedInIcon,
+    file: FileIcon,
 };
 
 const Icon = ({ name, alt = "", className = "", ...props }) => {

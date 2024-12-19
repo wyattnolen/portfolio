@@ -1,4 +1,6 @@
 import SocialLink from "./SocialLink";
+import Icon from "./Icon";
+
 
 const Header = ({ data }) => {
 	const { name, title, tag, socials } = data;
@@ -11,7 +13,16 @@ const Header = ({ data }) => {
                 </h1>
                 <h2 className="mt-3">{title}</h2>
                 <p className="mt-3">{tag}</p>
-                <div className="socials flex gap-3 mt-8">
+                <div className="socials flex gap-3 mt-8 items-center">
+                    <a 
+                        className="tag flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm bg-white text-dark px-4 py-2 m-0 pointer hover-bg-accent hover-text-dark" 
+                        href="/assets/resume.pdf" 
+                        download="wyatt-nolen-resume.pdf"
+                        rel="noopener noreferrer"
+                    >
+                        <Icon name="file"/>
+                        Resume
+                    </a>
                     {socials?.map((social) => (
                         <SocialLink
                             key={social.platform}
