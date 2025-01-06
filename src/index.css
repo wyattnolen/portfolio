@@ -19,17 +19,26 @@
     "Noto Color Emoji";
 
   /* Background Colors */
-  --primary-bg:   15 23 42;
+  --primary-bg: 15 23 42;
   /* --secondary-bg: 19 18 33; */
-  --accent-bg:    94 234 212;
-  --white-bg:     255 255 255;
+  --accent-bg: 94 234 212;
+  --white-bg: 255 255 255;
 
   /* Text Colors */
-  --primary-text:   226 232 240;
+  --primary-text: 226 232 240;
   --secondary-text: 148 163 184;
-  --tertiary-text:  100 116 139;
-  --accent-text:    94  234 212;
-  --dark-text:      19 18 33;
+  --tertiary-text: 100 116 139;
+  --accent-text: 94 234 212;
+  --dark-text: 19 18 33;
+  --light-text: 255 255 255;
+
+  /* Text Colors */
+  --primary-border: 226 232 240;
+  --secondary-border: 148 163 184;
+  --tertiary-border: 100 116 139;
+  --accent-border: 94 234 212;
+  --dark-border: 19 18 33;
+  --light-border: 255 255 255;
 
   /* Color Modifiers */
   --opaque: 1;
@@ -56,9 +65,11 @@ p {
 h1 {
   font-size: 3rem;
 }
+
 h2 {
   font-size: 1.25rem;
 }
+
 h3 {
   font-size: 1rem;
 }
@@ -72,11 +83,13 @@ a {
   color: unset;
   text-decoration: none;
 }
+
 a:hover {
   color: rgb(var(--accent-text) / var(--opaque));
 }
 
-ul, ol {
+ul,
+ol {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -112,73 +125,96 @@ body {
 .text-primary {
   color: rgb(var(--primary-text) / var(--opaque));
 }
+
 .text-secondary {
   color: rgb(var(--secondary-text) / var(--opaque));
 }
+
 .text-tertiary {
   color: rgb(var(--tertiary-text) / var(--opaque));
 }
+
 .text-accent {
   color: rgb(var(--accent-text) / var(--opaque));
 }
+
 .text-dark {
   color: rgb(var(--dark-text) / var(--opaque));
 }
+
 .text-opaque-2 {
   --opaque: .5;
 }
+
 .hover-text-dark:hover {
   color: rgb(var(--dark-text) / var(--opaque));
 }
+
 .bg-primary {
   background-color: rgb(var(--primary-bg) / var(--opaque));
 }
+
 .bg-secondary {
   background-color: rgb(var(--secondary-bg) / var(--opaque));
 }
+
 .bg-accent {
   background-color: rgb(var(--accent-bg) / var(--opaque));
 }
+
 .bg-white {
   background-color: rgb(var(--white-bg) / var(--opaque));
 }
+
 .hover-bg-accent:hover {
   background-color: rgb(var(--accent-bg) / var(--opaque));
 }
+
 .w-screen {
   width: 100vw;
 }
+
 .h-screen {
   height: 100vh;
 }
+
 .h-min-screen {
   min-height: 100vh;
 }
+
 .h-max-screen {
   max-height: 100vh;
 }
+
 .block {
   display: block;
 }
+
 .flex {
   display: flex;
 }
+
 .none {
   display: none;
 }
+
 .flex-col {
   flex-direction: column;
 }
+
 .flex-row {
   flex-direction: row;
 }
+
 .flex-wrap {
   flex-wrap: wrap;
 }
+
 @media (min-width: 1024px) {
   .flex-md-col {
     flex-direction: column;
   }
+
   .flex-md-row {
     flex-direction: row;
   }
@@ -187,30 +223,39 @@ body {
 .justify-center {
   justify-content: center;
 }
+
 .justify-between {
   justify-content: space-between;
 }
+
 .items-center {
   align-items: center;
 }
+
 .letter-tight {
   letter-spacing: -.025em;
 }
+
 .letter-wide {
   letter-spacing: .025em;
 }
+
 .line-relax {
   line-height: 1.625;
 }
+
 .scroll-smooth {
   scroll-behavior: smooth;
 }
+
 .rounded-md {
   border-radius: calc(var(--base-radius) - 2px);
 }
+
 .rounded-full {
   border-radius: 9999px;
 }
+
 .pointer {
   cursor: pointer;
 }
@@ -244,26 +289,59 @@ body {
 .gap-20 {
   gap: calc(var(--base-gap) * 20);
 }
+
+.p-1 {
+  padding-top: calc(var(--base-gap) * 1);
+  padding-right: calc(var(--base-gap) * 1);
+  padding-bottom: calc(var(--base-gap) * 1);
+  padding-left: calc(var(--base-gap) * 1);
+}
+
 .m-0 {
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 0;
 }
+
+.m-1 {
+  margin-top: calc(var(--base-gap) * 1);
+  margin-right: calc(var(--base-gap) * 1);
+  margin-bottom: calc(var(--base-gap) * 1);
+  margin-left: calc(var(--base-gap) * 1);
+}
+
 .mt-2 {
   margin-top: calc(var(--base-gap) * 2);
 }
+
 .mt-8 {
   margin-top: calc(var(--base-gap) * 8);
 }
+
 .mb-4 {
   margin-bottom: calc(var(--base-gap) * 4);
 }
+
 .mb-12 {
   margin-bottom: calc(var(--base-gap) * 12);
 }
+
 .mb-36 {
   margin-bottom: calc(var(--base-gap) * 36);
+}
+
+/* Borders */
+.border {
+  border-width: 1px;
+}
+
+.border-accent {
+  border-color: rgb(var(--accent-border) / var(--opaque));
+}
+
+.border-dashed {
+  border-style: dashed;
 }
 
 /* Font Size */
@@ -311,18 +389,25 @@ body {
 .font-medium {
   font-weight: 500;
 }
+
 .font-semibold {
   font-weight: 600;
 }
+
 .font-bold {
   font-weight: 700;
 }
+
 .font-extrabold {
   font-weight: 800;
 }
 
 .text-uppercase {
   text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
 }
 
 /* Positioning */
@@ -337,6 +422,7 @@ body {
 .mt-3 {
   margin-top: .75rem;
 }
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -354,14 +440,17 @@ body {
   grid-template-columns: repeat(8, minmax(0, 1fr));
   gap: 1rem;
 }
+
 .listItem__header {
   grid-column: span 2;
   z-index: 10;
 }
+
 .listItem__body {
   grid-column: span 6;
   z-index: 10;
 }
+
 .linkOverlay {
   position: absolute;
   border-radius: .25rem;
@@ -371,29 +460,56 @@ body {
   right: -1.5rem;
   z-index: 0;
 }
-.listItem .arrowUpIcon svg{
+
+.listItem .arrowUpIcon svg {
   transform-origin: left bottom;
 }
+
 .listItem__img {
   grid-column: span 2;
   object-fit: cover;
   z-index: 10;
 }
+
 .listItem:hover .linkOverlay {
-  background: rgba(30,41,59,.5);
+  background: rgba(30, 41, 59, .5);
 }
+
 .listItem:hover .arrowUpIcon svg {
   transform: scale(1.1);
 }
+
 .listItem:hover h3 a {
   color: rgb(var(--accent-text) / var(--opaque));
 }
 
+.btn-unset {
+  appearance: none;
+  background: inherit;
+  color: inherit;
+  padding: inherit;
+  margin: inherit;
+  font-size: 1rem;
+  border: 0;
+}
+
+.clarkTitle {
+  height: 30px;
+  width: 125px;
+  color: rgb(var(--accent-text) / var(--opaque));
+  transition: transform .25s cubic-bezier(0.075, 0.82, 0.165, 1), color .25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.clarkTitle:active {
+  color: rgb(var(--light-text) / var(--opaque));
+  transform: scale(.875);
+}
 
 @media (min-width: 1024px) {
   .site {
     padding: 0 6rem;
   }
+
   .site__header {
     position: sticky;
     top: 0;
@@ -402,6 +518,7 @@ body {
     width: 50%;
     max-height: 100vh;
   }
+
   .site__main {
     padding-top: 6rem;
     padding-bottom: 6rem;
